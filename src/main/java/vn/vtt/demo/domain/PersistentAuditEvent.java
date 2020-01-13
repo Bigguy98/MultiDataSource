@@ -14,13 +14,14 @@ import java.util.Map;
  */
 @Entity
 @Table(name = "jhi_persistent_audit_event")
+
 public class PersistentAuditEvent implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQUENCE_GENERATOR")
+    @SequenceGenerator(name = "SEQUENCE_GENERATOR")
     @Column(name = "event_id")
     private Long id;
 
